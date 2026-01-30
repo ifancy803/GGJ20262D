@@ -1,44 +1,51 @@
 using UnityEngine;
 
-public class PlayerController2D : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    
+    public float moveSpeed = 5f;  
+    public float jumpForce = 7f;  
 
-    private Rigidbody2D rb;
-    private bool isGrounded;
+    private Rigidbody2D rb;   
+    private Animator anim;   
+    private SpriteRenderer sprite; 
 
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
-    public LayerMask groundLayer;
+    private float horizontalInput;
 
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        // 左右移动
-        float moveX = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
-
-        // 跳跃
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("speed", Mathf.Abs(horizontalInput));
+        FlipCharacter();
+        
+        if (Input.GetButtonDown("Jump")) {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            anim.SetTrigger("jump"); 
         }
+
     }
 
     void FixedUpdate()
     {
-        // 检测是否在地面
-        isGrounded = Physics2D.OverlapCircle(
-            groundCheck.position,
-            groundCheckRadius,
-            groundLayer
-        );
+        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
     }
 
-
-}    
+    void FlipCharacter()
+    {
+        if (horizontalInput > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (horizontalInput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+}
