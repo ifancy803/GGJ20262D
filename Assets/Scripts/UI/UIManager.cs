@@ -1,4 +1,5 @@
 using System;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,16 @@ public class UIManager : Singleton<UIManager>
     [Header("外部变量")] 
     public Color maskColor;
     
+    public MMFeedbacks feedback;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             // 显示面板
             colorChoicePanel.gameObject.SetActive(true);
+            feedback.gameObject.SetActive(true);
+            feedback.PlayFeedbacks();
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
@@ -23,6 +28,7 @@ public class UIManager : Singleton<UIManager>
             if (choicePanel != null)
             {
                 choicePanel.SelectClosestPileOnRelease();
+                Time.timeScale = 0.3f;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
@@ -35,6 +41,7 @@ public class UIManager : Singleton<UIManager>
             {
                 choicePanel.ResetHoverState();
             }
+            Time.timeScale = 1;
         }
     }
 }

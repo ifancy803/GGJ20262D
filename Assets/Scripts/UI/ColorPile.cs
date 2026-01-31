@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using MoreMountains.Feedbacks;
 using UnityEngine.EventSystems;
 
 public class ColorPile : MonoBehaviour
@@ -13,7 +14,7 @@ public class ColorPile : MonoBehaviour
     [SerializeField] private Ease easeType = Ease.InOutElastic;
     
     private Vector3 originalScale;
-
+    public MMFeedbacks 粒子Feedbacks;
     void Start()
     {
         // 记录原始缩放
@@ -22,13 +23,14 @@ public class ColorPile : MonoBehaviour
 
     public void Hover()
     {
-        transform.DOScale(hoverScale,animationDuration).SetEase(easeType);
+        transform.DOScale(hoverScale,animationDuration).SetUpdate(true).SetEase(easeType);
         UIManager.Instance.maskColor =  maskColor;
+        粒子Feedbacks.PlayFeedbacks();
     }
 
     public void Unhover()
     {
-        transform.DOScale(originalScale, animationDuration).SetEase(easeType);
+        transform.DOScale(originalScale, animationDuration).SetUpdate(true).SetEase(easeType);
     }
     
 }

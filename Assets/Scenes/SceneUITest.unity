@@ -336,9 +336,6 @@ MonoBehaviour:
   r: {fileID: 1335972773}
   g: {fileID: 297026121}
   b: {fileID: 1979227833}
-  r_originalColor: {r: 0, g: 0, b: 0, a: 0}
-  g_originalColor: {r: 0, g: 0, b: 0, a: 0}
-  b_originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &611609969
 GameObject:
   m_ObjectHideFlags: 0
