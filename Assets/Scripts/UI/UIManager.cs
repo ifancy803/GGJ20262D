@@ -57,7 +57,6 @@ public class UIManager : Singleton<UIManager>
         else
         {
             endScale = false;
-            Time.timeScale = 1;
         }
     }
     
