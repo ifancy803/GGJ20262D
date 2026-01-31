@@ -5,18 +5,36 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
     public Image colorChoicePanel;
+    public ColorChoicePanel choicePanel; // 添加对ColorChoicePanel的引用
 
-    [Header("外部变量")] public Color maskColor;
+    [Header("外部变量")] 
+    public Color maskColor;
     
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
+            // 显示面板
             colorChoicePanel.gameObject.SetActive(true);
         }
-        else if(Input.GetKeyUp(KeyCode.Tab))
+        else if (Input.GetKey(KeyCode.Tab))
         {
+            // 按住Tab时持续检测鼠标位置并更新hover状态
+            if (choicePanel != null)
+            {
+                choicePanel.SelectClosestPileOnRelease();
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            // 隐藏面板
             colorChoicePanel.gameObject.SetActive(false);
+            
+            // 重置hover状态
+            if (choicePanel != null)
+            {
+                choicePanel.ResetHoverState();
+            }
         }
     }
 }
