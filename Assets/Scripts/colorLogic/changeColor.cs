@@ -8,7 +8,7 @@ public class changeColor : MonoBehaviour
     void Start()
     {
         // 找到当前场景中所有 Platform
-        platforms = FindObjectsOfTypeAll<Platform>();
+        platforms = FindObjectsOfType<Platform>();
     }
 
     void Update()
