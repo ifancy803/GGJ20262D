@@ -22,13 +22,13 @@ public class ColorPile : MonoBehaviour
 
     public void Hover()
     {
-        transform.DOScale(hoverScale,animationDuration).SetEase(easeType);
+        transform.DOScale(hoverScale,animationDuration).SetUpdate(true).SetEase(easeType);
         UIManager.Instance.maskColor =  maskColor;
     }
 
     public void Unhover()
     {
-        transform.DOScale(originalScale, animationDuration).SetEase(easeType);
+        transform.DOScale(originalScale, animationDuration).SetUpdate(true).SetEase(easeType);
     }
     
 }

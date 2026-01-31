@@ -23,6 +23,7 @@ public class UIManager : Singleton<UIManager>
             if (choicePanel != null)
             {
                 choicePanel.SelectClosestPileOnRelease();
+                Time.timeScale = 0.3f;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
@@ -35,6 +36,7 @@ public class UIManager : Singleton<UIManager>
             {
                 choicePanel.ResetHoverState();
             }
+            Time.timeScale = 1;
         }
     }
 }
