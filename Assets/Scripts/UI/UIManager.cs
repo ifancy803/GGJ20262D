@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +9,8 @@ public class UIManager : Singleton<UIManager>
 {
     public Image colorChoicePanel;
     public ColorChoicePanel choicePanel; // 添加对ColorChoicePanel的引用
-
+    private bool endScale = false;    
+    
     [Header("外部变量")] 
     public Color maskColor;
     
@@ -29,8 +32,8 @@ public class UIManager : Singleton<UIManager>
             if (choicePanel != null)
             {
                 choicePanel.SelectClosestPileOnRelease();
-                Time.timeScale = 0f;
             }
+            if(Time.timeScale>0) Time.timeScale-= Time.deltaTime*5;
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
         {
@@ -42,8 +45,20 @@ public class UIManager : Singleton<UIManager>
             {
                 choicePanel.ResetHoverState();
             }
-            Time.timeScale = 1;
+
+            endScale = true;
             SimpleCinemachineShake2023.Instance.TriggerShake();
         }
+
+        if (endScale && Time.timeScale < 1)
+        {
+            Time.timeScale += Time.deltaTime * 5;
+        }
+        else
+        {
+            endScale = false;
+            Time.timeScale = 1;
+        }
     }
+    
 }
