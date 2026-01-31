@@ -1,21 +1,33 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class ColorPile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ColorPile : MonoBehaviour
 {
-    public Color color;
+    [Header("颜色设置")]
+    public Color maskColor;
     
-    public void OnPointerEnter(PointerEventData eventData)
+    [Header("动画设置")]
+    [SerializeField] private float hoverScale = 1.2f;
+    [SerializeField] private float animationDuration = 0.1f;
+    [SerializeField] private Ease easeType = Ease.InOutElastic;
+    
+    private Vector3 originalScale;
+
+    void Start()
     {
-        transform.DOScale(3f,0.5f).SetLoops(1, LoopType.Yoyo)
-            .SetEase(Ease.InOutQuart);
-        UIManager.Instance.maskColor = color;
+        // 记录原始缩放
+        originalScale = transform.localScale;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void Hover()
     {
-        transform.DOScale(1f,0.5f).SetLoops(1, LoopType.Yoyo)
-            .SetEase(Ease.InOutQuart);
+        transform.DOScale(hoverScale,animationDuration).SetEase(easeType);
     }
+
+    public void Unhover()
+    {
+        transform.DOScale(originalScale, animationDuration).SetEase(easeType);
+    }
+    
 }
