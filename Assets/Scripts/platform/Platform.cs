@@ -5,17 +5,26 @@ public class Platform : MonoBehaviour
 {
     public Vector3 oriColor;
     public Vector3 curColor;
+    private BoxCollider2D coll;
     private SpriteRenderer sr;
     public Color R, G, B, RG, RB, GB, RGB, None;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        coll = GetComponent<BoxCollider2D>();
+        curColor = oriColor;
     }
 
     private void Update()
     {
         changeCor();
+        coll.enabled = sr.color != None;
+        
+        var c = sr.color;
+        c.a = c==None? 0:255;
+        sr.color = c;
+        
     }
 
     void changeCor()
