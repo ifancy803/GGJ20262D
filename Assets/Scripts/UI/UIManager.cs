@@ -19,8 +19,8 @@ public class UIManager : Singleton<UIManager>
         {
             // 显示面板
             colorChoicePanel.gameObject.SetActive(true);
-            feedback.gameObject.SetActive(true);
-            feedback.PlayFeedbacks();
+            //feedback.gameObject.SetActive(true);
+            //feedback.PlayFeedbacks();
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
