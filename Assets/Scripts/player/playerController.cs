@@ -19,6 +19,7 @@ public class playerController : MonoBehaviour
     private SpriteRenderer sprite;
 
     private float horizontalInput;
+    private bool firstReleaseSpace=false;
 
     void Start()
     {
@@ -38,8 +39,7 @@ public class playerController : MonoBehaviour
         {
             curSpeed = floatSpeed;
         }
-
-        bool firstReleaseSpace = false;
+        
         if (!isGrounded && !firstReleaseSpace && Input.GetButtonUp("Jump"))
         {
             firstReleaseSpace = true;
