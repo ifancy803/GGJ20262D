@@ -2,9 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     public Image colorChoicePanel;
+
+    [Header("外部变量")] public Color maskColor;
+    
     private void Update()
     {
         if (Input.GetKey(KeyCode.Tab))
