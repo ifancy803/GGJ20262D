@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1353995619}
   shakeIntensity: 2.03
-  shakeDuration: 0.395
+  shakeDuration: 0.24
 --- !u!114 &1353995622
 MonoBehaviour:
   m_ObjectHideFlags: 0
