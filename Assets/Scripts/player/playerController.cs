@@ -4,6 +4,9 @@ public class playerController : MonoBehaviour
 {
     
     public float moveSpeed;  
+    public float RunSpeed;  
+    public float floatSpeed;
+    public float curSpeed;  
     public float jumpForce;  
     
     private bool isGrounded;
@@ -26,8 +29,16 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        anim.SetFloat("speed", Mathf.Abs(horizontalInput));
+        if (isGrounded)
+        {
+            curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
+        }
+        else
+        {
+            curSpeed = floatSpeed;
+        }
+        horizontalInput = Input.GetAxis("Horizontal");
+        anim.SetFloat("speed", Mathf.Abs(horizontalInput)*curSpeed);
         FlipCharacter();
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -45,7 +56,7 @@ public class playerController : MonoBehaviour
     void FixedUpdate()
     {
         checkGround();
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(horizontalInput * curSpeed, rb.linearVelocity.y);
     }
 
     void FlipCharacter()
