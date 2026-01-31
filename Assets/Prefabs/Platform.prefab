@@ -149,3 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriColor: {x: 0, y: 0, z: 0}
   curColor: {x: 0, y: 0, z: 0}
+  R: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 0}
+  G: {r: 0, g: 0, b: 0, a: 0}
+  B: {r: 0, g: 0, b: 0, a: 0}
+  RG: {r: 0, g: 0, b: 0, a: 0}
+  RB: {r: 0, g: 0, b: 0, a: 0}
+  GB: {r: 0, g: 0, b: 0, a: 0}
+  RGB: {r: 0, g: 0, b: 0, a: 0}
+  None: {r: 0, g: 0, b: 0, a: 0}

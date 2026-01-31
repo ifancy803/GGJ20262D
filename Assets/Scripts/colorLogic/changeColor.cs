@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class changeColor : MonoBehaviour
 {
+    public Color receiveCor;
     private Platform[] platforms;
 
     void Start()
     {
         // 找到当前场景中所有 Platform
-        platforms = FindObjectsOfType<Platform>();
+        platforms = FindObjectsOfTypeAll<Platform>();
     }
 
     void Update()
     {
+        receiveCor = UIManager.Instance.maskColor;
         if (Input.GetKeyDown(KeyCode.J))
         {
             foreach (var p in platforms)
