@@ -21,7 +21,7 @@ public class UIManager : Singleton<UIManager>
             colorChoicePanel.gameObject.SetActive(true);
             // feedback.gameObject.SetActive(true);
             // feedback.PlayFeedbacks();
-            SimpleCinemachineShake2023.Instance.TriggerShake();
+            
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
@@ -29,7 +29,7 @@ public class UIManager : Singleton<UIManager>
             if (choicePanel != null)
             {
                 choicePanel.SelectClosestPileOnRelease();
-                Time.timeScale = 0.3f;
+                Time.timeScale = 0f;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
@@ -43,6 +43,7 @@ public class UIManager : Singleton<UIManager>
                 choicePanel.ResetHoverState();
             }
             Time.timeScale = 1;
+            SimpleCinemachineShake2023.Instance.TriggerShake();
         }
     }
 }
