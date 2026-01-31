@@ -21,6 +21,7 @@ public class UIManager : Singleton<UIManager>
             colorChoicePanel.gameObject.SetActive(true);
             // feedback.gameObject.SetActive(true);
             // feedback.PlayFeedbacks();
+            SimpleCinemachineShake2023.Instance.TriggerShake();
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
