@@ -33,7 +33,7 @@ public class changeColor : MonoBehaviour
 
     enum color
     {
-        red,green,blue;
+        red,green,blue
     }
 
     void changeCol(color c, Platform p)
