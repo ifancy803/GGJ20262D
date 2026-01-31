@@ -1,46 +1,40 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
     public Image colorChoicePanel;
-    public ColorChoicePanel choicePanel; // 添加对ColorChoicePanel的引用
+    public ColorChoicePanel choicePanel;
     private bool endScale = false;    
     
     [Header("外部变量")] 
     public Color maskColor;
     
-    public MMF_Player feedback;
-    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            // 显示面板
             colorChoicePanel.gameObject.SetActive(true);
-            // feedback.gameObject.SetActive(true);
-            // feedback.PlayFeedbacks();
-            
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
-            // 按住Tab时持续检测鼠标位置并更新hover状态
             if (choicePanel != null)
             {
                 choicePanel.SelectClosestPileOnRelease();
             }
-            if(Time.timeScale>0) Time.timeScale-= Time.deltaTime*5;
+            
+            // 使用 unscaledDeltaTime，不受时间缩放影响
+            if(Time.timeScale > 0) 
+                Time.timeScale -= Time.unscaledDeltaTime * 2f;
+            
+            // 确保不会小于0
+            if(Time.timeScale < 0.05f) 
+                Time.timeScale = 0.00f; // 留一点最小值，不要完全为0
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
         {
-            // 隐藏面板
             colorChoicePanel.gameObject.SetActive(false);
             
-            // 重置hover状态
             if (choicePanel != null)
             {
                 choicePanel.ResetHoverState();
@@ -52,12 +46,14 @@ public class UIManager : Singleton<UIManager>
 
         if (endScale && Time.timeScale < 1)
         {
-            Time.timeScale += Time.deltaTime * 5;
-        }
-        else
-        {
-            endScale = false;
+            // 恢复时也使用 unscaledDeltaTime
+            Time.timeScale += Time.unscaledDeltaTime * 2f;
+            
+            if(Time.timeScale >= 1f)
+            {
+                Time.timeScale = 1f;
+                endScale = false;
+            }
         }
     }
-    
 }
