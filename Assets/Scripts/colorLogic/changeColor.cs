@@ -14,19 +14,19 @@ public class changeColor : MonoBehaviour
     void Update()
     {
         receiveCor = UIManager.Instance.maskColor;
-        if (Input.GetKeyDown(KeyCode.J))
+        if (receiveCor==Color.red)
         {
             foreach (var p in platforms)
                 changeCol(color.red, p);
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
+        else if (receiveCor==Color.green)
         {
             foreach (var p in platforms)
                 changeCol(color.green, p);
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        else if (receiveCor==Color.blue)
         {
             foreach (var p in platforms)
                 changeCol(color.blue, p);
