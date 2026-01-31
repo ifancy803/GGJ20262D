@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public Vector3 oriColor, curColor;
+    public Vector3 oriColor;
+    public Vector3 curColor;
     private SpriteRenderer sr;
     public Color R, G, B, RG, RB, GB, RGB, None;
 
