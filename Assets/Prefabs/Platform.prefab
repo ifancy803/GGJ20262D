@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43b31fa0e9af3b449bd2126941f1709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oriColor: {x: 0, y: 0, z: 0}
-  curColor: {x: 0, y: 0, z: 0}
+  oriColor: {x: 1, y: 1, z: 1}
+  curColor: {x: 1, y: 1, z: 1}
   R: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 0}
   G: {r: 0, g: 0, b: 0, a: 0}
   B: {r: 0, g: 0, b: 0, a: 0}
