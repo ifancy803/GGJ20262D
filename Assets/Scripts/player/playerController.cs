@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class playerController : Singleton<playerController>
 {
+    private Transform oriTransform = null;
     
     public float moveSpeed;  
     public float RunSpeed;  
@@ -21,12 +23,15 @@ public class playerController : MonoBehaviour
     private float horizontalInput;
     private bool firstReleaseSpace=false;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        oriTransform = transform;
     }
+    
 
     void Update()
     {
@@ -91,5 +96,14 @@ public class playerController : MonoBehaviour
             groundLayer
         );
     }
+
+    public void Reset()
+    {
+        // 使用 Rigidbody2D 的 MovePosition 方法
+        rb.MovePosition(oriTransform.position);
     
+        // 同时重置速度，避免惯性影响
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+    }
 }

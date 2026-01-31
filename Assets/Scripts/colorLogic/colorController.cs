@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class changeColor : MonoBehaviour
+public class colorController : Singleton<colorController>
 {
     public Color receiveCor;
     public Platform[] platforms;
@@ -43,25 +44,11 @@ public class changeColor : MonoBehaviour
         }
     }
 
-    enum color
+    public void Reset()
     {
-        red,green,blue
-    }
-
-    void changeCol(color c, Platform p)
-    {
-        var oriCor = p.oriColor;
-        if (c == color.red)
+        foreach (var p in platforms)
         {
-            p.curColor = new Vector3(0, oriCor.y, oriCor.z);
-        }
-        else if (c == color.blue)
-        {
-            p.curColor = new Vector3(oriCor.x, oriCor.y, 0);
-        }
-        else if (c == color.green)
-        {
-            p.curColor = new Vector3(oriCor.x, 0, oriCor.z);
+            p.curColor = p.oriColor;
         }
     }
 }
