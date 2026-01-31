@@ -11,7 +11,7 @@ public class UIManager : Singleton<UIManager>
     [Header("外部变量")] 
     public Color maskColor;
     
-    public MMF_Player feedback;
+    public MMFeedbacks feedback;
     
     private void Update()
     {

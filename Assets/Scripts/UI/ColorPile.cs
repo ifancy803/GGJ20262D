@@ -25,7 +25,7 @@ public class ColorPile : MonoBehaviour
     {
         transform.DOScale(hoverScale,animationDuration).SetUpdate(true).SetEase(easeType);
         UIManager.Instance.maskColor =  maskColor;
-        //粒子Feedbacks.PlayFeedbacks();
+        粒子Feedbacks.PlayFeedbacks();
     }
 
     public void Unhover()
