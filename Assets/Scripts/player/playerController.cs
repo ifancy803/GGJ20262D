@@ -32,17 +32,29 @@ public class playerController : MonoBehaviour
         if (isGrounded)
         {
             curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
+            rb.gravityScale = 1;
         }
         else
         {
             curSpeed = floatSpeed;
         }
+
+        bool firstReleaseSpace = false;
+        if (!isGrounded && !firstReleaseSpace && Input.GetButtonUp("Jump"))
+        {
+            firstReleaseSpace = true;
+            rb.gravityScale = 3;
+        }
+        
+        
+        
         horizontalInput = Input.GetAxis("Horizontal");
         anim.SetFloat("speed", Mathf.Abs(horizontalInput)*curSpeed);
         FlipCharacter();
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            firstReleaseSpace = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("jump");
         }
