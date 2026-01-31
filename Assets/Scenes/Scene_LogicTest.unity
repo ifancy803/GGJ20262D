@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskColor: {r: 0, g: 1, b: 0, a: 0}
   hoverScale: 1.2
-  animationDuration: 0.5
+  animationDuration: 0.2
   easeType: 13
 --- !u!114 &1331296488
 MonoBehaviour:
@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskColor: {r: 1, g: 0, b: 0, a: 0}
   hoverScale: 1.2
-  animationDuration: 0.5
+  animationDuration: 0.2
   easeType: 13
 --- !u!114 &1710334657
 MonoBehaviour:
@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskColor: {r: 0, g: 0, b: 1, a: 0}
   hoverScale: 1.2
-  animationDuration: 0.5
+  animationDuration: 0.2
   easeType: 13
 --- !u!114 &2032803786
 MonoBehaviour:
