@@ -23,6 +23,7 @@ public class ColorPile : MonoBehaviour
     public void Hover()
     {
         transform.DOScale(hoverScale,animationDuration).SetEase(easeType);
+        UIManager.Instance.maskColor =  maskColor;
     }
 
     public void Unhover()
