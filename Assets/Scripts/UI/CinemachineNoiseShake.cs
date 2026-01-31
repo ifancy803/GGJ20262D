@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class SimpleCinemachineShake2023 : MonoBehaviour
+public class SimpleCinemachineShake2023 : Singleton<SimpleCinemachineShake2023>
 {
     [Header("目标相机")]
     public CinemachineCamera targetCamera;
@@ -106,14 +106,5 @@ public class SimpleCinemachineShake2023 : MonoBehaviour
             currentShake = null;
         }
         ResetNoise();
-    }
-    
-    void Update()
-    {
-        // 测试
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            TriggerShake();
-        }
     }
 }
