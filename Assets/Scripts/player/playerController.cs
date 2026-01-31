@@ -3,8 +3,8 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
     
-    public float moveSpeed = 5f;  
-    public float jumpForce = 7f;  
+    public float moveSpeed;  
+    public float jumpForce;  
     
     private bool isGrounded;
     public Transform groundCheck;
@@ -68,4 +68,5 @@ public class playerController : MonoBehaviour
             groundLayer
         );
     }
+    
 }
