@@ -11,7 +11,7 @@ public class UIManager : Singleton<UIManager>
     [Header("外部变量")] 
     public Color maskColor;
     
-    public MMF_Player feedback;
+    public MMFeedbacks feedback;
     
     private void Update()
     {
@@ -19,8 +19,8 @@ public class UIManager : Singleton<UIManager>
         {
             // 显示面板
             colorChoicePanel.gameObject.SetActive(true);
-            feedback.gameObject.SetActive(true);
-            feedback.PlayFeedbacks();
+            //feedback.gameObject.SetActive(true);
+            //feedback.PlayFeedbacks();
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
