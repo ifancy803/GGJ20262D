@@ -48,7 +48,9 @@ public class colorController : Singleton<colorController>
 
     public void Reset()
     {
-        receiveCor=Color.black;
+        if(UIManager.Instance!=null)
+            UIManager.Instance.maskColor = Color.black;
+        
         foreach (var p in platforms)
         {
             p.curColor = p.oriColor;

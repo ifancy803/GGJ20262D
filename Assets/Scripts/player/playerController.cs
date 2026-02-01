@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class playerController : Singleton<playerController>
 {
-    private Transform oriTransform = null;
+    private Transform oriTransform;
     
     public float moveSpeed;  
     public float RunSpeed;  
@@ -14,7 +14,7 @@ public class playerController : Singleton<playerController>
     private bool isGrounded;
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
-    public LayerMask groundLayer;
+    public LayerMask groundLayer, deathLayer;
     
     private Rigidbody2D rb;   
     private Animator anim;   
@@ -30,9 +30,13 @@ public class playerController : Singleton<playerController>
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        
+    }
+
+    private void Start()
+    {
         oriTransform = transform;
     }
-    
 
     void Update()
     {
@@ -107,6 +111,16 @@ public class playerController : Singleton<playerController>
             groundCheckRadius,
             groundLayer
         );
+        
+        if(Physics2D.OverlapCircle(
+               groundCheck.position,
+               groundCheckRadius,
+               deathLayer
+               )
+           )
+        {
+            GameManager.isDead = true;
+        }
     }
 
     public void Reset()

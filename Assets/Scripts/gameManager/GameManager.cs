@@ -1,20 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public bool isdead;
+    public static bool isDead;
 
     private void Awake()
     {
-        isdead = false;
+        isDead = false;
     }
 
     private float timer;
     private void Update()
     {
         timer += Time.deltaTime;
-        if ((isdead || Input.GetKeyDown(KeyCode.R)))
+        if ((isDead || Input.GetKeyDown(KeyCode.R)))
         {
             timer = 0;
             Debug.Log("Reset");
@@ -26,6 +27,6 @@ public class gameManager : MonoBehaviour
     {
         colorController.Instance.Reset();
         playerController.Instance.Reset();
-        isdead = false;
+        isDead = false;
     }
 }
