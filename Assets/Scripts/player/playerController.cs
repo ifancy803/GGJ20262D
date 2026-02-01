@@ -57,10 +57,10 @@ public class playerController : Singleton<playerController>
             curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
             rb.gravityScale = 1f;
         }
-        else
-        {
-            curSpeed = floatSpeed;
-        }
+        // else
+        // {
+        //     curSpeed = floatSpeed;
+        // }
         
         if (Input.GetButton("Jump"))
         {
@@ -85,7 +85,7 @@ public class playerController : Singleton<playerController>
         
         anim.SetBool("IsFall",!isGrounded);
         
-        
+        rb.linearVelocity = new Vector2(horizontalInput * curSpeed, rb.linearVelocity.y);
 
         
     }
@@ -93,7 +93,7 @@ public class playerController : Singleton<playerController>
     void FixedUpdate()
     {
         checkGround();
-        rb.linearVelocity = new Vector2(horizontalInput * curSpeed, rb.linearVelocity.y);
+        
     }
 
     void FlipCharacter()
