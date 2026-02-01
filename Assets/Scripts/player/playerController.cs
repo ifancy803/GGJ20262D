@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class playerController : Singleton<playerController>
 {
-    private Transform oriTransform;
+    private Vector3 oriPos;
     
     public float moveSpeed;  
     public float RunSpeed;  
@@ -35,7 +35,7 @@ public class playerController : Singleton<playerController>
 
     private void Start()
     {
-        oriTransform = transform;
+        oriPos = transform.position;
     }
 
     void Update()
@@ -125,19 +125,9 @@ public class playerController : Singleton<playerController>
 
     public void Reset()
     {
-        if (oriTransform == null)
-        {
-            Debug.LogError("oriTransform is not initialized.");
-            return;
-        }
-
-        if (rb == null)
-        {
-            Debug.LogError("Rigidbody2D is not initialized.");
-            return;
-        }
+        Debug.Log(oriPos);
         // 使用 Rigidbody2D 的 MovePosition 方法
-        rb.MovePosition(oriTransform.position);
+        rb.MovePosition(oriPos);
     
         // 同时重置速度，避免惯性影响
         rb.linearVelocity = Vector2.zero;
