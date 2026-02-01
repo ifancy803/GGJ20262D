@@ -3,18 +3,20 @@ using UnityEngine;
 
 public class colorController : Singleton<colorController>
 {
-    public Color receiveCor;
+    public Color receiveCor=Color.black;
     public Platform[] platforms;
 
     void Start()
     {
+        receiveCor=Color.black;
         // 找到当前场景中所有 Platform
         platforms = FindObjectsByType<Platform>(FindObjectsSortMode.None);
     }
 
     void Update()
     {
-        receiveCor = UIManager.Instance.maskColor;
+        if(UIManager.Instance!=null)
+            receiveCor = UIManager.Instance.maskColor;
         if (receiveCor==Color.red)
         {
             foreach (var p in platforms)
@@ -46,6 +48,7 @@ public class colorController : Singleton<colorController>
 
     public void Reset()
     {
+        receiveCor=Color.black;
         foreach (var p in platforms)
         {
             p.curColor = p.oriColor;

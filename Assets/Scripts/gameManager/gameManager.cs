@@ -14,7 +14,7 @@ public class gameManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if ((isdead || Input.GetKeyDown(KeyCode.R)) && timer>=1)
+        if ((isdead || Input.GetKeyDown(KeyCode.R)))
         {
             timer = 0;
             Debug.Log("Reset");

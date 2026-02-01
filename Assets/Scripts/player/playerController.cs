@@ -99,6 +99,17 @@ public class playerController : Singleton<playerController>
 
     public void Reset()
     {
+        if (oriTransform == null)
+        {
+            Debug.LogError("oriTransform is not initialized.");
+            return;
+        }
+
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D is not initialized.");
+            return;
+        }
         // 使用 Rigidbody2D 的 MovePosition 方法
         rb.MovePosition(oriTransform.position);
     
