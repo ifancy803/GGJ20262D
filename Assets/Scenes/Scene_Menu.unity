@@ -572,7 +572,7 @@ MonoBehaviour:
   levels:
   - description: 1
     button: {fileID: 368405231}
-    sceneName: Scene_Game 1
+    sceneName: Scene_Game 1-1
   - description: 2
     button: {fileID: 1992024111}
     sceneName: Scene_Game 2
