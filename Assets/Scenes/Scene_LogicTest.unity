@@ -910,6 +910,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &576395800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2024,7 +2027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35522f5e975461f43817811aab5c3847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isdead: 0
 --- !u!1 &1742865254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2118,7 @@ GameObject:
   - component: {fileID: 1941093656}
   - component: {fileID: 1941093658}
   - component: {fileID: 1941093657}
+  - component: {fileID: 1941093659}
   m_Layer: 5
   m_Name: "\u5173\u5361\u63D0\u793A"
   m_TagString: Untagged
@@ -2162,7 +2165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NewGameMention
+  m_text: aaaaaaaaaaaaa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2241,6 +2244,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941093655}
   m_CullTransparentMesh: 1
+--- !u!114 &1941093659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941093655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c719e75457f5f14f9dcf02a7511138b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1941093657}
+  messages:
+  - 1111111111
+  - 22222222
+  - 33333333
+  - 
+  charsPerSecond: 20
+  messageDelay: 3
+  fadeInTime: 0.5
+  fadeOutTime: 0.5
 --- !u!1001 &1958839447
 PrefabInstance:
   m_ObjectHideFlags: 0
