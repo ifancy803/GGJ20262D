@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3536981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7539433734920017889, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
+  m_PrefabInstance: {fileID: 8050304442530485463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &103021842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,6 +2758,18 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 5371621161714379859, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
   m_PrefabInstance: {fileID: 8050304442530485463}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1753603412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f2aeceb0c03b94dbead433ba85f933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1790108253
 GameObject:
   m_ObjectHideFlags: 0
@@ -3043,6 +3060,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5371621161714379859, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371621161714379859, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: ca33c85c5815a9e4084fb63ea4f689e7, type: 3}
+    - target: {fileID: 5371621161714379859, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2273146209696275378, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
     - target: {fileID: 7348821672739328996, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2022.021
@@ -3085,12 +3114,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7539433734920017889, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
       propertyPath: m_Name
-      value: Audio Source
+      value: BGMPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7539433734920017889, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1753603412}
   m_SourcePrefab: {fileID: 100100000, guid: df36227f5f00170429994ef3879ca5cf, type: 3}
 --- !u!1001 &8078816688895233341
 PrefabInstance:
