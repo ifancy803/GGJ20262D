@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class playerController : Singleton<playerController>
@@ -23,6 +25,7 @@ public class playerController : Singleton<playerController>
     private float horizontalInput;
 
     private float leaveGroundtTime=0;
+    private float timer = 0;
 
     protected override void Awake()
     {
@@ -40,6 +43,7 @@ public class playerController : Singleton<playerController>
 
     void Update()
     {
+        timer += Time.deltaTime;
         if (isGrounded)
         {
             leaveGroundtTime = 0;
@@ -74,8 +78,8 @@ public class playerController : Singleton<playerController>
             anim.SetTrigger("jump");
         }
 
-
-        horizontalInput = Input.GetAxis("Horizontal");
+        if(timer>0.2f)
+            horizontalInput = Input.GetAxis("Horizontal");
         anim.SetFloat("speed", Mathf.Abs(horizontalInput)*curSpeed);
         FlipCharacter();
         
@@ -123,14 +127,28 @@ public class playerController : Singleton<playerController>
         }
     }
 
+    public float t1;
     public void Reset()
     {
         Debug.Log(oriPos);
-        // 使用 Rigidbody2D 的 MovePosition 方法
-        rb.MovePosition(oriPos);
+
+        //transform.DOLocalMove(oriPos, t1).SetEase(Ease.OutCubic);
+        //rb.MovePosition(oriPos);
+        transform.position = oriPos;
     
         // 同时重置速度，避免惯性影响
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
+        horizontalInput = 0f;
+        timer = 0f;
+
+        StartCoroutine(setReset());
+    }
+
+    IEnumerator setReset()
+    {
+        anim.SetBool("Reset", true);
+        yield return new WaitForSeconds(0.2f);
+        anim.SetBool("Reset", false);
     }
 }

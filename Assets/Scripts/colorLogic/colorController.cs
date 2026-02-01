@@ -32,7 +32,7 @@ public class colorController : Singleton<colorController>
             foreach (var p in platforms)
             {
                 var oriCor = p.oriColor;
-                p.curColor = new Vector3(oriCor.x, oriCor.y, 0);
+                p.curColor = new Vector3(oriCor.x, 0,oriCor.z );
             }
         }
 
@@ -41,7 +41,7 @@ public class colorController : Singleton<colorController>
             foreach (var p in platforms)
             {
                 var oriCor = p.oriColor;
-                p.curColor = new Vector3(oriCor.x, 0, oriCor.z);
+                p.curColor = new Vector3(oriCor.x, oriCor.y, 0);
             }
         }
     }
