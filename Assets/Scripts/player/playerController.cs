@@ -142,9 +142,12 @@ public class playerController : Singleton<playerController>
     {
         Debug.Log(oriPos);
 
+        StartCoroutine(setReset());
+        
         //transform.DOLocalMove(oriPos, t1).SetEase(Ease.OutCubic);
         //rb.MovePosition(oriPos);
         transform.position = oriPos;
+        transform.localScale = new Vector3(2, 2, 2);
     
         // 同时重置速度，避免惯性影响
         rb.linearVelocity = Vector2.zero;
@@ -152,7 +155,7 @@ public class playerController : Singleton<playerController>
         horizontalInput = 0f;
         timer = 0f;
 
-        StartCoroutine(setReset());
+        
     }
 
     IEnumerator setReset()
