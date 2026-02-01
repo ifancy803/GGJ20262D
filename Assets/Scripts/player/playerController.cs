@@ -33,7 +33,7 @@ public class playerController : Singleton<playerController>
 
     private float horizontalInput;
 
-    private float leaveGroundtTime=0;
+    private float leaveGroundTime=0;
     private float timer = 0;
 
     protected override void Awake()
@@ -55,11 +55,11 @@ public class playerController : Singleton<playerController>
         timer += Time.deltaTime;
         if (isGrounded)
         {
-            leaveGroundtTime = 0;
+            leaveGroundTime = 0;
         }
         else
         {
-            leaveGroundtTime += Time.deltaTime;
+            leaveGroundTime += Time.deltaTime;
         }
         if (isGrounded)
         {
@@ -82,7 +82,7 @@ public class playerController : Singleton<playerController>
         }
         
 
-        if (Input.GetButtonDown("Jump") && leaveGroundtTime<=0.1f)
+        if (Input.GetButtonDown("Jump") && leaveGroundTime<=0.1f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("jump");
