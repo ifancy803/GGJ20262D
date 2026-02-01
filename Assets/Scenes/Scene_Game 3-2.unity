@@ -1916,14 +1916,18 @@ PrefabInstance:
     - target: {fileID: 2030761947388347554, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: de0012ddb054edc4bbad0de5d42b5fd0, type: 2}
+      objectReference: {fileID: 11400000, guid: cb183abd1c9f96d4cb1be25b5fa23e4c, type: 2}
     - target: {fileID: 2030761947388347554, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -6963902841900705985, guid: de0012ddb054edc4bbad0de5d42b5fd0, type: 2}
+      objectReference: {fileID: 4434978611067333236, guid: cb183abd1c9f96d4cb1be25b5fa23e4c, type: 2}
     - target: {fileID: 2030761947388347554, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893154424996127928, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2254,6 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChoicePanel: {fileID: 391344485}
+  "\u65F6\u505CFadepanel": {fileID: 0}
   choicePanel: {fileID: 391344484}
   maskColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1374762771
@@ -2333,6 +2338,7 @@ MonoBehaviour:
   deathLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioSource: {fileID: 0}
   t1: 0
 --- !u!50 &1415078577
 Rigidbody2D:
