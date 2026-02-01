@@ -9,9 +9,18 @@ public class playerController : Singleton<playerController>
     
     public float moveSpeed;  
     public float RunSpeed;  
-    public float floatSpeed;
+    public float runFloatSpeed;
+    public float moveFloatSpeed;
     public float curSpeed;  
-    public float jumpForce;  
+    public float jumpForce;
+
+    enum moveMode
+    {
+        run,
+        move
+    }
+
+    private moveMode movemode;
     
     private bool isGrounded;
     public Transform groundCheck;
@@ -54,13 +63,14 @@ public class playerController : Singleton<playerController>
         }
         if (isGrounded)
         {
-            curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
+            movemode= (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? moveMode.run:moveMode.move;
+            curSpeed = movemode == moveMode.move ? moveSpeed : RunSpeed;
             rb.gravityScale = 1f;
         }
-        // else
-        // {
-        //     curSpeed = floatSpeed;
-        // }
+        else
+        {
+            curSpeed = movemode==moveMode.move? moveFloatSpeed:runFloatSpeed;
+        }
         
         if (Input.GetButton("Jump"))
         {
