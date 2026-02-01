@@ -365,7 +365,7 @@ MonoBehaviour:
   pausePanelObj: {fileID: 1158036073956721830}
   pauseCanvasGroup: {fileID: 7069814628827000600}
   contentContainer: {fileID: 3254194925586250905}
-  openPauseBtn: {fileID: 0}
+  openPauseBtn: {fileID: 5058477210922126325, guid: bce91561b3b3da64d9b5b363e40505b3, type: 3}
   resumeBtn: {fileID: 7100727353002744509}
   backMenuBtn: {fileID: 4965866583917958642}
   quitBtn: {fileID: 6058637365850236499}
