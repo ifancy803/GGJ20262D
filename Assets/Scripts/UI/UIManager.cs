@@ -9,9 +9,16 @@ public class UIManager : Singleton<UIManager>
     public Image 时停Fadepanel;
     public ColorChoicePanel choicePanel;
     private bool endScale = false;    
+    AudioSource audioSource;
     
     [Header("外部变量")] 
     public Color maskColor;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnEnable()
     {
@@ -23,6 +30,7 @@ public class UIManager : Singleton<UIManager>
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             colorChoicePanel.gameObject.SetActive(true);
+            audioSource.Play();
         }
         else if (Input.GetKey(KeyCode.Tab))
         {
