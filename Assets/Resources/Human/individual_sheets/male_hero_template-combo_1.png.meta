@@ -112,10 +112,10 @@ TextureImporter:
       name: male_hero_template-combo_1_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 47
-        width: 60
-        height: 40
+        x: 54
+        y: 48
+        width: 58
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: male_hero_template-combo_1_1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 46
-        width: 62
-        height: 40
+        x: 182
+        y: 47
+        width: 60
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: male_hero_template-combo_1_2
       rect:
         serializedVersion: 2
-        x: 309
-        y: 46
-        width: 59
-        height: 32
+        x: 310
+        y: 47
+        width: 57
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: male_hero_template-combo_1_3
       rect:
         serializedVersion: 2
-        x: 360
-        y: 52
-        width: 6
-        height: 6
+        x: 361
+        y: 53
+        width: 4
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 068fa50ee46f09f47a673dd63ce37001
     internalID: 0
     vertices: []
     indices: 

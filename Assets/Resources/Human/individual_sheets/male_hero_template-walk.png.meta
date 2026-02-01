@@ -130,10 +130,10 @@ TextureImporter:
       name: male_hero_template-walk_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 47
-        width: 24
-        height: 33
+        x: 54
+        y: 48
+        width: 22
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: male_hero_template-walk_1
       rect:
         serializedVersion: 2
-        x: 184
-        y: 47
-        width: 18
-        height: 34
+        x: 185
+        y: 48
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: male_hero_template-walk_2
       rect:
         serializedVersion: 2
-        x: 313
-        y: 47
-        width: 17
-        height: 35
+        x: 314
+        y: 48
+        width: 15
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: male_hero_template-walk_3
       rect:
         serializedVersion: 2
-        x: 439
-        y: 47
-        width: 20
-        height: 36
+        x: 440
+        y: 48
+        width: 18
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: male_hero_template-walk_4
       rect:
         serializedVersion: 2
-        x: 566
-        y: 47
-        width: 23
-        height: 35
+        x: 567
+        y: 48
+        width: 21
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: male_hero_template-walk_5
       rect:
         serializedVersion: 2
-        x: 693
-        y: 47
-        width: 24
-        height: 33
+        x: 694
+        y: 48
+        width: 22
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: male_hero_template-walk_6
       rect:
         serializedVersion: 2
-        x: 824
-        y: 47
-        width: 18
-        height: 34
+        x: 825
+        y: 48
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: male_hero_template-walk_7
       rect:
         serializedVersion: 2
-        x: 954
-        y: 47
-        width: 17
-        height: 35
+        x: 955
+        y: 48
+        width: 15
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: male_hero_template-walk_8
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 47
-        width: 19
-        height: 36
+        x: 1081
+        y: 48
+        width: 17
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: male_hero_template-walk_9
       rect:
         serializedVersion: 2
-        x: 1207
-        y: 47
-        width: 22
-        height: 35
+        x: 1208
+        y: 48
+        width: 20
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 574e921625534094eaef0d8cae6d6ea7
     internalID: 0
     vertices: []
     indices: 

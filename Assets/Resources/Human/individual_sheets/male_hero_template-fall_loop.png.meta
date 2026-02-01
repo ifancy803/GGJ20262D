@@ -109,10 +109,10 @@ TextureImporter:
       name: male_hero_template-fall_loop_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 47
-        width: 29
-        height: 42
+        x: 47
+        y: 48
+        width: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: male_hero_template-fall_loop_1
       rect:
         serializedVersion: 2
-        x: 174
-        y: 47
-        width: 29
-        height: 42
+        x: 175
+        y: 48
+        width: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: male_hero_template-fall_loop_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 47
-        width: 29
-        height: 42
+        x: 303
+        y: 48
+        width: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 038fd8fc0039e194b92b225c4be2aa61
     internalID: 0
     vertices: []
     indices: 
