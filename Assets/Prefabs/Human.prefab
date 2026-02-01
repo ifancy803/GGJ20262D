@@ -730,7 +730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   RunSpeed: 8
-  floatSpeed: 3
+  runFloatSpeed: 5
+  moveFloatSpeed: 3
   curSpeed: 0
   jumpForce: 8
   groundCheck: {fileID: 2160889106916682733}
@@ -738,6 +739,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  t1: 0
 --- !u!50 &4436356241157806592
 Rigidbody2D:
   serializedVersion: 5

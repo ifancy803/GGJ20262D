@@ -9,9 +9,18 @@ public class playerController : Singleton<playerController>
     
     public float moveSpeed;  
     public float RunSpeed;  
-    public float floatSpeed;
+    public float runFloatSpeed;
+    public float moveFloatSpeed;
     public float curSpeed;  
-    public float jumpForce;  
+    public float jumpForce;
+
+    enum moveMode
+    {
+        run,
+        move
+    }
+
+    private moveMode movemode;
     
     private bool isGrounded;
     public Transform groundCheck;
@@ -24,7 +33,7 @@ public class playerController : Singleton<playerController>
 
     private float horizontalInput;
 
-    private float leaveGroundtTime=0;
+    private float leaveGroundTime=0;
     private float timer = 0;
 
     protected override void Awake()
@@ -46,20 +55,21 @@ public class playerController : Singleton<playerController>
         timer += Time.deltaTime;
         if (isGrounded)
         {
-            leaveGroundtTime = 0;
+            leaveGroundTime = 0;
         }
         else
         {
-            leaveGroundtTime += Time.deltaTime;
+            leaveGroundTime += Time.deltaTime;
         }
         if (isGrounded)
         {
-            curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
+            movemode= (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? moveMode.run:moveMode.move;
+            curSpeed = movemode == moveMode.move ? moveSpeed : RunSpeed;
             rb.gravityScale = 1f;
         }
         else
         {
-            curSpeed = floatSpeed;
+            curSpeed = movemode==moveMode.move? moveFloatSpeed:runFloatSpeed;
         }
         
         if (Input.GetButton("Jump"))
@@ -72,7 +82,7 @@ public class playerController : Singleton<playerController>
         }
         
 
-        if (Input.GetButtonDown("Jump") && leaveGroundtTime<=0.1f)
+        if (Input.GetButtonDown("Jump") && leaveGroundTime<=0.1f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("jump");
@@ -85,7 +95,7 @@ public class playerController : Singleton<playerController>
         
         anim.SetBool("IsFall",!isGrounded);
         
-        
+        rb.linearVelocity = new Vector2(horizontalInput * curSpeed, rb.linearVelocity.y);
 
         
     }
@@ -93,7 +103,7 @@ public class playerController : Singleton<playerController>
     void FixedUpdate()
     {
         checkGround();
-        rb.linearVelocity = new Vector2(horizontalInput * curSpeed, rb.linearVelocity.y);
+        
     }
 
     void FlipCharacter()
