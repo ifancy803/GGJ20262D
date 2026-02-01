@@ -1954,58 +1954,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1328713658006593956, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328713658006593956, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328713658006593956, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328713658006593956, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8014681895380806196, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      propertyPath: m_text
-      value: Level 2-1
-      objectReference: {fileID: 0}
     - target: {fileID: 8214596276389010399, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
