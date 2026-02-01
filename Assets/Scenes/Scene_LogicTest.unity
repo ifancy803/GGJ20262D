@@ -913,6 +913,7 @@ MonoBehaviour:
   deathLayer:
     serializedVersion: 2
     m_Bits: 0
+  t1: 0
 --- !u!1001 &576395800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2260,7 +2261,7 @@ MonoBehaviour:
   messages:
   - 11111111
   - 2222222222222222222222222222222222
-  - 3333333333333333333333333
+  - 33333333333333333333
   - 
   charsPerSecond: 20
   messageDelay: 3
