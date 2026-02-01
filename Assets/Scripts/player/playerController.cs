@@ -38,7 +38,7 @@ public class playerController : Singleton<playerController>
         if (isGrounded)
         {
             curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
-            rb.gravityScale = 1;
+            rb.gravityScale = 1f;
         }
         else
         {
@@ -48,7 +48,7 @@ public class playerController : Singleton<playerController>
         if (!isGrounded && !firstReleaseSpace && Input.GetButtonUp("Jump"))
         {
             firstReleaseSpace = true;
-            rb.gravityScale = 3;
+            rb.gravityScale = 2f;
         }
         
         
