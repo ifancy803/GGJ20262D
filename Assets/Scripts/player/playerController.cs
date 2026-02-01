@@ -35,6 +35,7 @@ public class playerController : Singleton<playerController>
 
     private float leaveGroundTime = 0;
     private float timer = 0;
+    public AudioSource audioSource;
 
     protected override void Awake()
     {
@@ -42,6 +43,7 @@ public class playerController : Singleton<playerController>
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -85,6 +87,7 @@ public class playerController : Singleton<playerController>
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("jump");
+            audioSource.Play();
         }
 
         // ===== ★ 新增：Jump Cut（短跳关键）=====
