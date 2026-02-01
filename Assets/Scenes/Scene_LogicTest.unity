@@ -473,42 +473,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1575526922684383829, guid: cb136ead45f2fe64d8a13ee0fde8ce09, type: 3}
   m_PrefabInstance: {fileID: 2006607166}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &396218641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5290329208345746016, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-  m_PrefabInstance: {fileID: 1348661579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &396218646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396218641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typewriterStartsAutomatically: 0
-  animationLoop: 0
-  timeScale: 0
-  _text: 
-  useDynamicScaling: 1
-  referenceFontSize: 10
-  isResettingTimeOnNewText: 1
-  useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 0}
-  databaseAppearances: {fileID: 0}
-  useDefaultStyleSheet: 1
-  styleSheet: {fileID: 0}
-  databaseActions: {fileID: 0}
-  defaultAppearancesTags:
-  - size
-  defaultDisappearancesTags:
-  - fade
-  defaultBehaviorsTags: []
-  defaultTagsMode: 0
 --- !u!1 &427621499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,42 +1257,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &710632477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5168227593921378275, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-  m_PrefabInstance: {fileID: 1348661579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &710632482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710632477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typewriterStartsAutomatically: 0
-  animationLoop: 0
-  timeScale: 0
-  _text: 
-  useDynamicScaling: 1
-  referenceFontSize: 10
-  isResettingTimeOnNewText: 1
-  useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 0}
-  databaseAppearances: {fileID: 0}
-  useDefaultStyleSheet: 1
-  styleSheet: {fileID: 0}
-  databaseActions: {fileID: 0}
-  defaultAppearancesTags:
-  - size
-  defaultDisappearancesTags:
-  - fade
-  defaultBehaviorsTags: []
-  defaultTagsMode: 0
 --- !u!1 &826955630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,11 +1760,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3185178242044183251, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_text
-      value: <pend>G</pend>
+      value: <incr>G</incr>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185178242044183251, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 3185178242044183251, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 3185178242044183251, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535025604657438042, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_text
-      value: <pend>B</pend>
+      value: <incr>B</incr>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535025604657438042, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 3535025604657438042, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 3535025604657438042, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4486633629626661431, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1856,7 +1808,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758573109197999538, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_text
-      value: <pend>R</pend>
+      value: <incr>R</incr>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758573109197999538, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 7758573109197999538, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 7758573109197999538, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1961,16 +1925,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3057076637658444609, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1815796274}
-    - targetCorrespondingSourceObject: {fileID: 5290329208345746016, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 396218646}
-    - targetCorrespondingSourceObject: {fileID: 5168227593921378275, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 710632482}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
 --- !u!1 &1353995617
 GameObject:
@@ -2411,42 +2366,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742865254}
   m_CullTransparentMesh: 1
---- !u!1 &1815796269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3057076637658444609, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
-  m_PrefabInstance: {fileID: 1348661579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1815796274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815796269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typewriterStartsAutomatically: 0
-  animationLoop: 0
-  timeScale: 0
-  _text: <wave>R</wave>
-  useDynamicScaling: 1
-  referenceFontSize: 10
-  isResettingTimeOnNewText: 1
-  useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 11400000, guid: ac55be03fd658204b90ccdaa806a91f4, type: 2}
-  databaseAppearances: {fileID: 11400000, guid: 197e9f42235d68a40a468bdf75c3e80d, type: 2}
-  useDefaultStyleSheet: 1
-  styleSheet: {fileID: 0}
-  databaseActions: {fileID: 11400000, guid: dfc68a985ae214c4593d319290e00de5, type: 2}
-  defaultAppearancesTags:
-  - size
-  defaultDisappearancesTags:
-  - fade
-  defaultBehaviorsTags: []
-  defaultTagsMode: 0
 --- !u!4 &1822033241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1575526922684383829, guid: 03522514c7126e142b2f50b3a6564b94, type: 3}
