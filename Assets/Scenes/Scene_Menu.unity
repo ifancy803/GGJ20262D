@@ -575,13 +575,13 @@ MonoBehaviour:
     sceneName: Scene_Game 1-1
   - description: 2
     button: {fileID: 1992024111}
-    sceneName: Scene_Game 2
+    sceneName: Scene_Game 2-1
   - description: 3
     button: {fileID: 1549315194}
-    sceneName: Scene_Game 3
+    sceneName: Scene_Game 3-1
   - description: 4
     button: {fileID: 574349196}
-    sceneName: Scene_Game 4
+    sceneName: Scene_Game 4-1
   slideDuration: 0.6
   slideEase: 13
 --- !u!82 &188249474
