@@ -21,7 +21,6 @@ public class playerController : Singleton<playerController>
     private SpriteRenderer sprite;
 
     private float horizontalInput;
-    private bool firstReleaseSpace=false;
 
     private float leaveGroundtTime=0;
 
@@ -55,19 +54,18 @@ public class playerController : Singleton<playerController>
             curSpeed = floatSpeed;
         }
         
-        if (!isGrounded && !firstReleaseSpace && Input.GetButtonUp("Jump"))
+        if (Input.GetButton("Jump"))
         {
-            firstReleaseSpace = true;
+            rb.gravityScale = 1f;
+        }
+        else
+        {
             rb.gravityScale = 2f;
         }
-        
-        
-        
         
 
         if (Input.GetButtonDown("Jump") && leaveGroundtTime<=0.1f)
         {
-            firstReleaseSpace = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("jump");
         }
