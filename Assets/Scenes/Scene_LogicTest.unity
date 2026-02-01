@@ -2258,9 +2258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1941093657}
   messages:
-  - 1111111111
-  - 22222222
-  - 33333333
+  - 11111111
+  - 2222222222222222222222222222222222
+  - 3333333333333333333333333
   - 
   charsPerSecond: 20
   messageDelay: 3
