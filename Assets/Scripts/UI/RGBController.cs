@@ -1,3 +1,4 @@
+using Febucci.UI;
 using UnityEngine;
 using TMPro;
 
@@ -15,9 +16,18 @@ public class RGBController : MonoBehaviour
     
     private void Start()
     {
-        if (r != null) r.color = r_originalColor;
-        if (g != null) g.color = g_originalColor;
-        if (b != null) b.color = b_originalColor;
+        if (r != null)
+        {
+            r.color = r_originalColor;
+        }
+        if (g != null)
+        {
+            g.color = g_originalColor;
+        }
+        if (b != null)
+        {
+            b.color = b_originalColor;
+        }
     }
 
     private void Update()
