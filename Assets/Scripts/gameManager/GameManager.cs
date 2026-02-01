@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour
 
     private void Reset()
     {
-        SimpleCinemachineShake2023.Instance.TriggerShake();
+        
         colorController.Instance.Reset();
         playerController.Instance.Reset();
         isDead = false;
+        SimpleCinemachineShake2023.Instance.TriggerShake(5f,1f);
     }
 }
