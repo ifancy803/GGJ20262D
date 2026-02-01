@@ -741,7 +741,7 @@ MonoBehaviour:
     m_Bits: 64
   deathLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   t1: 0
 --- !u!50 &4436356241157806592
 Rigidbody2D:
