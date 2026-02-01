@@ -2088,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5972090805688659361, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: 'messages.Array.data[0]'
-      value: Press WASD to move
+      value: Press Shift to run
       objectReference: {fileID: 0}
     - target: {fileID: 7777963884229232215, guid: f1e148fbd15ea3f4aa339637eda45b14, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2276,6 +2276,7 @@ MonoBehaviour:
   deathLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioSource: {fileID: 0}
   t1: 0
 --- !u!50 &1415078577
 Rigidbody2D:

@@ -2138,6 +2138,7 @@ MonoBehaviour:
   deathLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioSource: {fileID: 0}
   t1: 0
 --- !u!50 &1415078577
 Rigidbody2D:
@@ -2486,7 +2487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <rainb><shake>Thanks for playing our game.
+  m_text: <rainb><shake a=0.5>Thanks for playing our game.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2580,7 +2581,7 @@ MonoBehaviour:
   typewriterStartsAutomatically: 0
   animationLoop: 0
   timeScale: 0
-  _text: <rainb><shake>Thanks for playing our game.
+  _text: <rainb><shake a=0.5>Thanks for playing our game.
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
