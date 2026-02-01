@@ -45,7 +45,7 @@ public class playerController : Singleton<playerController>
         {
             leaveGroundtTime += Time.deltaTime;
         }
-        if (leaveGroundtTime<=0.1f)
+        if (isGrounded)
         {
             curSpeed = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? RunSpeed : moveSpeed;
             rb.gravityScale = 1f;
@@ -55,7 +55,7 @@ public class playerController : Singleton<playerController>
             curSpeed = floatSpeed;
         }
         
-        if (leaveGroundtTime>0.1f && !firstReleaseSpace && Input.GetButtonUp("Jump"))
+        if (!isGrounded && !firstReleaseSpace && Input.GetButtonUp("Jump"))
         {
             firstReleaseSpace = true;
             rb.gravityScale = 2f;
@@ -63,9 +63,7 @@ public class playerController : Singleton<playerController>
         
         
         
-        horizontalInput = Input.GetAxis("Horizontal");
-        anim.SetFloat("speed", Mathf.Abs(horizontalInput)*curSpeed);
-        FlipCharacter();
+        
 
         if (Input.GetButtonDown("Jump") && leaveGroundtTime<=0.1f)
         {
@@ -75,7 +73,13 @@ public class playerController : Singleton<playerController>
         }
 
 
+        horizontalInput = Input.GetAxis("Horizontal");
+        anim.SetFloat("speed", Mathf.Abs(horizontalInput)*curSpeed);
+        FlipCharacter();
+        
         anim.SetBool("IsFall",!isGrounded);
+        
+        
 
         
     }
