@@ -733,7 +733,7 @@ MonoBehaviour:
   runFloatSpeed: 5
   moveFloatSpeed: 3
   curSpeed: 0
-  jumpForce: 8
+  jumpForce: 6
   groundCheck: {fileID: 2160889106916682733}
   groundCheckRadius: 0.01
   groundLayer:
