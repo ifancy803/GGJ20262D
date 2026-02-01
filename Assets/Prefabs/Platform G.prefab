@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriColor: {x: 0, y: 1, z: 0}
   curColor: {x: 1, y: 1, z: 1}
-  R: {r: 1, g: 0.003921569, b: 0.003921569, a: 1}
+  R: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   G: {r: 0, g: 1, b: 0, a: 1}
   B: {r: 0, g: 0, b: 1, a: 1}
   RG: {r: 1, g: 1, b: 0, a: 1}
